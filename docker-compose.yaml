@@ -1,0 +1,34 @@
+name: focused_jeff
+services:
+  main_app:
+    cpu_shares: 10
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 4096M
+    image: finchsec/kismet:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/kismet.png
+    privileged: true
+    restart: unless-stopped
+    ports: []
+    volumes: []
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: host
+    container_name: ""
+    hostname: ""
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/kismet.png
+  index: /
+  is_uncontrolled: false
+  port_map: "2501"
+  scheme: http
+  store_app_id: focused_jeff
+  title:
+    custom: kismet
