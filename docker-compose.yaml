@@ -13,7 +13,10 @@ services:
     privileged: true
     restart: unless-stopped
     ports: []
-    volumes: []
+    volumes:
+      - type: bind
+        source: /DATA/AppData/kismet/conf/kismet_site.conf
+        target: /usr/local/etc/kismet_site.conf
     devices: []
     cap_add: []
     environment: []
